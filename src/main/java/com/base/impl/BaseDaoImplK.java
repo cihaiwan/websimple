@@ -12,6 +12,8 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.transform.Transformers;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -20,7 +22,7 @@ import com.base.IBaseDaoK;
 @Repository
 public class BaseDaoImplK extends HibernateDaoSupport implements IBaseDaoK{
 	
-	
+	private static final Logger logger=LoggerFactory.getLogger(BaseDaoImplK.class);
 	
 	public <T> void save(T t) throws Exception {
 		getHibernateTemplate().save(t);
@@ -169,4 +171,6 @@ public class BaseDaoImplK extends HibernateDaoSupport implements IBaseDaoK{
 			}
 		});
 	}
+	
+	
 }

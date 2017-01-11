@@ -6,6 +6,8 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -18,12 +20,14 @@ import com.google.gson.GsonBuilder;
 @Controller
 @RequestMapping("/test")
 public class Test22Controller {
+	private static final Logger logger=LoggerFactory.getLogger(Test22Controller.class); 
 	Gson gson=new GsonBuilder().create();
 
 	@Resource
 	private IBaseServiceK k;
 	@RequestMapping("/test")
 	public void test() throws Exception{
+		logger.debug("hello world");
 //		TestUser testUser=new TestUser();
 //		k.save(testUser);
 //		TestUser user=k.findOne(TestUser.class,"1");
