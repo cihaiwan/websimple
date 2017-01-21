@@ -1,9 +1,5 @@
 package com.base.controller;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import javax.annotation.Resource;
 
 import org.slf4j.Logger;
@@ -12,8 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.base.IBaseServiceK;
-import com.base.bean.PageBeanK;
-import com.base.entity.TestUser;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

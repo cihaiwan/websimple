@@ -17,7 +17,7 @@
 	<dependency>
 	    <groupId>c3p0</groupId>
 	    <artifactId>c3p0</artifactId>
-	    <version>0.9.1</version>
+	    <version>0.9.1.2</version>
 	</dependency>
     <dependency>
 	    <groupId>org.hibernate</groupId>
@@ -115,6 +115,7 @@
 
   </dependencies>
   <build>
+  <defaultGoal>install</defaultGoal>
     <finalName>websimple</finalName>
   </build>
 </project>
